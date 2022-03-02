@@ -24,6 +24,7 @@ yarn-error.log*
 
 # cache
 .eslintcache
+.stylelintcache
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm
