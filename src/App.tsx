@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from './tokenfolio-white.svg';
-import './App.css';
 
 const App = () => (
-  <div className="App">
+  <div className="bg-sky-300">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>Get the best in class investment opportunities in early-stage startups.</p>
