@@ -1,16 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './tokenfolio-white.svg';
 import './App.css';
 
 const App = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
+      <p>Get the best in class investment opportunities in early-stage startups.</p>
       <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
+        Crowdfund the future, now!
       </a>
     </header>
   </div>
