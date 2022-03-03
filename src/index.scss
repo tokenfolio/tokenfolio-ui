@@ -74,7 +74,7 @@
 
   .input {
     &__input {
-      @apply bg-platinum w-full transition duration-300 focus-visible:ring-4 ring-chinese-purple;
+      @apply bg-platinum w-full transition duration-300 focus-visible:ring-4 ring-chinese-purple/50;
     }
 
     &__lg {

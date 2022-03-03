@@ -1,3 +1,10 @@
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) return `rgb(var(${variable}))`;
+    return `rgb(var(${variable}) / ${opacityValue})`;
+  }
+}
+
 module.exports = {
   content: ['./src/**/*.{ts,tsx}', './public/index.html'],
   darkMode: 'class',
@@ -6,17 +13,17 @@ module.exports = {
       'dm-sans': ['DM Sans', 'sans-serif']
     },
     colors: {
-      white: 'var(--color-white)',
-      cultured: 'var(--color-cultured)',
-      'anti-flash-white': 'var(--color-anti-flash-white)',
-      platinum: 'var(--color-platinum)',
-      'roman-silver': 'var(--color-roman-silver)',
-      black: 'var(--color-black)',
-      'pale-taupe': 'var(--color-pale-taupe)',
-      'persian-blue': 'var(--color-persian-blue)',
-      'chinese-purple': 'var(--color-chinese-purple)',
-      melon: 'var(--color-melon)',
-      'rosso-corsa': 'var(--color-rosso-corsa)',
+      white: withOpacityValue('--color-white'),
+      cultured: withOpacityValue('--color-cultured'),
+      'anti-flash-white': withOpacityValue('--color-anti-flash-white'),
+      platinum: withOpacityValue('--color-platinum'),
+      'roman-silver': withOpacityValue('--color-roman-silver'),
+      black: withOpacityValue('--color-black'),
+      'pale-taupe': withOpacityValue('--color-pale-taupe'),
+      'persian-blue': withOpacityValue('--color-persian-blue'),
+      'chinese-purple': withOpacityValue('--color-chinese-purple'),
+      melon: withOpacityValue('--color-melon'),
+      'rosso-corsa': withOpacityValue('--color-rosso-corsa'),
       transparent: 'transparent',
     },
     extend: {
