@@ -1,10 +1,15 @@
 @import './colors';
 
 :root {
+  --color-white: #{$color-white};
   --color-cultured: #{$color-cultured};
+  --color-anti-flash-white: #{$color-anti-flash-white};
   --color-platinum: #{$color-platinum};
+  --color-roman-silver: #{$color-roman-silver};
   --color-black: #{$color-black};
   --color-pale-taupe: #{$color-pale-taupe};
-  --color-roman-silver: #{$color-roman-silver};
   --color-persian-blue: #{$color-persian-blue};
+  --color-chinese-purple: #{$color-chinese-purple};
+  --color-melon: #{$color-melon};
+  --color-rosso-corsa: #{$color-rosso-corsa};
 }

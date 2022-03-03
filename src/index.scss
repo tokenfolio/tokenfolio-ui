@@ -8,6 +8,83 @@
 
 @layer base {
   body {
-    @apply font-dm-sans text-black bg-cultured text-lg;
+    @apply font-dm-sans text-black bg-cultured;
+  }
+
+  a,
+  button,
+  input {
+    @apply outline-none;
+  }
+
+  a {
+    @apply text-chinese-purple focus:underline rounded-md hover:underline;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl xl:text-5xl my-5;
+  }
+
+  h2 {
+    @apply text-3xl xl:text-4xl my-4;
+  }
+
+  h3 {
+    @apply text-2xl xl:text-3xl my-3;
+  }
+
+  h4 {
+    @apply text-xl xl:text-2xl my-2;
+  }
+
+  h5 {
+    @apply text-lg xl:text-xl my-1;
+  }
+
+  h6 {
+    @apply text-base xl:text-lg;
+  }
+}
+
+@layer components {
+  .button {
+    @apply font-medium transition duration-300 focus-visible:ring-4 focus-visible:ring-chinese-purple;
+
+    &__lg {
+      @apply w-56 py-3 rounded-lg hover:shadow-lg active:ring-4;
+    }
+
+    &__black {
+      @apply button bg-black text-cultured hover:text-white hover:shadow-roman-silver active:ring-roman-silver;
+    }
+
+    &__lg__black {
+      @apply button__lg button__black;
+    }
+  }
+
+  .input {
+    &__input {
+      @apply bg-platinum w-full transition duration-300 focus-visible:ring-4 ring-chinese-purple;
+    }
+
+    &__lg {
+      .label {
+        @apply font-bold my-2;
+      }
+
+      input {
+        @apply input__input py-3 px-4 rounded-lg;
+      }
+    }
   }
 }

@@ -28,6 +28,9 @@ plugins:
   - react-hooks
   - prettier
 rules:
+  jsx-a11y/label-has-associated-control:
+    - warn
+    - assert: nesting
   prettier/prettier:
     - warn
   react/jsx-filename-extension:
