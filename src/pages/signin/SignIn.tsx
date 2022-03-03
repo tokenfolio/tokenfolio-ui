@@ -16,13 +16,13 @@ const SignIn: React.FC = () => (
         <section className="my-8">
           <form className="flex flex-col gap-4">
             <div className="flex justify-between items-center text-sm text-rosso-corsa bg-melon py-1.5 rounded-lg px-4">
-              <span>Incorrect email address or phone number</span>
+              <span>Incorrect email address</span>
               <button type="button" className="w-7 text-center relative -right-2 text-2xl">
                 &times;
               </button>
             </div>
             <label className="input__lg">
-              <div className="label">Email address or Phone number</div>
+              <div className="label">Email address</div>
               <input type="email" />
             </label>
             <div className="text-center mt-4 mb-6">
