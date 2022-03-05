@@ -9,9 +9,13 @@ const TopNavigation: React.FC = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <nav className="h-20 flex items-center justify-between px-8">
+    <nav className="h-20 flex items-center justify-between">
       <h1 className="h4">{PAGES[pathname === '/' ? PATH_DASHBOARD : pathname].title}</h1>
-      <div className="relative" onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
+      <div
+        className="group relative"
+        onMouseEnter={() => setShowDropdown(true)}
+        onMouseLeave={() => setShowDropdown(false)}
+      >
         <figure>
           <img
             className="top-navigation__profile__picture"
@@ -22,6 +26,7 @@ const TopNavigation: React.FC = () => {
         </figure>
         {showDropdown && (
           <div className="top-navigation__profile__dropdown">
+            <div className="arrow-up border-b-white mr-2 ml-auto" />
             <Link to={PATH_ACCOUNT}>{PAGES[PATH_ACCOUNT].title}</Link>
             <Link to={PATH_LOGOUT}>{PAGES[PATH_LOGOUT].title}</Link>
           </div>

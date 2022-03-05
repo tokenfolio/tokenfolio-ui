@@ -93,10 +93,11 @@
       }
     }
   }
-}
 
-@layer utilities {
-  .not-standard-link {
-    @apply text-black focus:no-underline rounded-md hover:no-underline;
+  .arrow {
+    &-up {
+      border-width: 12px;
+      @apply w-0 h-0 border-l-transparent border-r-transparent border-t-0 border-b-black;
+    }
   }
 }

@@ -37,19 +37,19 @@
   &__profile {
     &__picture {
       @apply h-10 w-10 rounded-full ring-0 ring-chinese-purple/50 ring-offset-2 border-chinese-purple;
-      @apply cursor-pointer hover:ring-4 transition duration-300;
+      @apply cursor-pointer group-hover:ring-4 transition duration-300;
     }
 
     &__dropdown {
-      @apply absolute right-0 flex flex-col;
+      @apply absolute right-0 flex flex-col rounded-lg drop-shadow-md pt-2;
 
       > a {
-        @apply px-8 py-3 w-52 text-left bg-platinum;
+        @apply px-5 py-3 w-52 text-left bg-white;
         @apply hover:bg-chinese-purple hover:text-cultured;
         @extend %not-standard-link;
 
-        &:first-child {
-          @apply mt-4 rounded-tl-lg rounded-tr-lg;
+        &:nth-child(2) {
+          @apply rounded-tl-lg rounded-tr-lg;
         }
 
         &:last-child {
