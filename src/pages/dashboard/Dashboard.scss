@@ -36,7 +36,7 @@
 .top-navigation {
   &__profile {
     &__picture {
-      @apply h-10 w-10 rounded-full ring-0 ring-chinese-purple/50 ring-offset-2 border-chinese-purple;
+      @apply h-10 w-10 rounded-full ring-0 ring-chinese-purple/60 ring-offset-2 border-chinese-purple;
       @apply cursor-pointer group-hover:ring-4 transition duration-300;
     }
 

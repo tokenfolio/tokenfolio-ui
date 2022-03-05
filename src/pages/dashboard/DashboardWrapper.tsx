@@ -9,12 +9,12 @@ type Props = {
 
 const DashboardWrapper: React.FC<Props> = ({ children }) => (
   <div>
-    <div className="grid grid-cols-12 gap-8">
-      <div className="col-span-2">
+    <div className="flex gap-8">
+      <div className="w-72">
         <LeftNavigation />
       </div>
-      <div className="col-span-10 mx-8">
-        <div className="col-span-2 my-4">
+      <div className="grow mx-8">
+        <div className="my-4">
           <TopNavigation />
         </div>
         <main className="my-4">{children}</main>
