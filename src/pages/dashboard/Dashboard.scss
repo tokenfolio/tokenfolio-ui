@@ -31,6 +31,12 @@
       }
     }
   }
+
+  &__support-button {
+    @extend %not-standard-link;
+    @apply w-52 inline-block bg-black text-cultured px-8 py-4 rounded-lg hover:bg-chinese-purple;
+    @apply transition duration-300;
+  }
 }
 
 .top-navigation {

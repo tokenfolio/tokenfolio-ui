@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { PATH_DASHBOARD } from 'shared/constants';
+import {
+  PAGES,
+  PATH_ACTIVE_DEALS,
+  PATH_ALLOCATION_STAKING,
+  PATH_DASHBOARD,
+  PATH_SUPPORT,
+  PATH_TOKEN_SALES,
+  PATH_WALLET,
+} from 'shared/constants';
 import 'pages/dashboard/Dashboard.scss';
 import tokenfolioLogo from 'shared/assets/tokenfolio-black.svg';
 import { ReactComponent as DashboardIcon } from 'shared/assets/dashboard-icon.svg';
@@ -11,55 +19,57 @@ import { ReactComponent as AllocationStakingIcon } from 'shared/assets/allocatio
 
 const menuOptions: {
   path: string;
-  label: string;
   icon: React.ElementType;
 }[] = [
   {
     path: PATH_DASHBOARD,
-    label: 'Dashboard',
     icon: DashboardIcon,
   },
   {
-    path: '/wallet',
-    label: 'Wallet',
+    path: PATH_WALLET,
     icon: WalletIcon,
   },
   {
-    path: '/deals',
-    label: 'Active deals',
+    path: PATH_ACTIVE_DEALS,
     icon: ActiveDealsIcon,
   },
   {
-    path: '/sales',
-    label: 'Token sales',
+    path: PATH_TOKEN_SALES,
     icon: TokenSalesIcon,
   },
   {
-    path: '/staking',
-    label: 'Allocation staking',
+    path: PATH_ALLOCATION_STAKING,
     icon: AllocationStakingIcon,
   },
 ];
 
 const LeftNavigation: React.FC = () => (
-  <nav>
+  <nav className="h-screen w-72 fixed">
     <figure className="mx-8 my-12">
       <Link to="/">
         <img className="w-32 h-32" src={tokenfolioLogo} alt="Tokenfolio" />
       </Link>
     </figure>
-    <ul className="left-navigation__menu">
-      {menuOptions.map(({ path, label, icon: Icon }) => (
+    <div className="left-navigation__menu">
+      {menuOptions.map(({ path, icon: Icon }) => (
         <NavLink
           className={({ isActive }) => `${isActive ? 'active' : ''} flex items-center gap-2`}
           key={path}
           to={path}
         >
           <Icon className="left-navigation__menu__icon mb-1" />
-          {label}
+          {PAGES[path].title}
         </NavLink>
       ))}
-    </ul>
+    </div>
+    <div className="absolute bottom-8 left-8">
+      <Link to={PATH_SUPPORT} className="left-navigation__support-button">
+        {PAGES[PATH_SUPPORT].title}
+        <span className="border-2 text-sm float-right font-bold border-cultured rounded-full w-6 h-6 text-center inline-block">
+          ?
+        </span>
+      </Link>
+    </div>
   </nav>
 );
 

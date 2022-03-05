@@ -4,6 +4,7 @@ export const PATH_ACTIVE_DEALS = '/deals';
 export const PATH_TOKEN_SALES = '/sales';
 export const PATH_ALLOCATION_STAKING = '/staking';
 export const PATH_ACCOUNT = '/account';
+export const PATH_SUPPORT = '/support';
 export const PATH_LOGOUT = '/logout';
 
 export const PAGES: { [path: string]: { title: string } } = {
@@ -24,6 +25,9 @@ export const PAGES: { [path: string]: { title: string } } = {
   },
   [PATH_ACCOUNT]: {
     title: 'Account settings',
+  },
+  [PATH_SUPPORT]: {
+    title: 'Support',
   },
   [PATH_LOGOUT]: {
     title: 'Logout',
