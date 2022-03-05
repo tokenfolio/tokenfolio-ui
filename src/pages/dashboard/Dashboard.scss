@@ -13,12 +13,14 @@
       }
       @apply rounded-none px-8 py-4 text-black font-medium;
       @apply hover:bg-chinese-purple hover:text-cultured hover:no-underline focus:no-underline;
+      @apply transition duration-300;
 
       &:hover,
       &.active {
         #{$self}__icon {
           path {
             fill: $color-cultured-hex;
+            transition: all 100ms ease-out;
           }
         }
       }
