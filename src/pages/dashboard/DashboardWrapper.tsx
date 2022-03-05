@@ -14,10 +14,10 @@ const DashboardWrapper: React.FC<Props> = ({ children }) => (
         <LeftNavigation />
       </div>
       <div className="col-span-10">
-        <div className="col-span-2">
+        <div className="col-span-2 mt-4">
           <TopNavigation />
         </div>
-        <main>{children}</main>
+        <main className="px-8">{children}</main>
         <Footer />
       </div>
     </div>

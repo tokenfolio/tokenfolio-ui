@@ -1,4 +1,5 @@
 @import 'src/shared/styles/colors';
+@import 'src/shared/styles/utils';
 
 .left-navigation {
   &__menu {
@@ -6,14 +7,14 @@
     $self: &;
 
     a {
+      @extend %not-standard-link;
       #{$self}__icon {
         path {
           fill: $color-black-hex;
         }
       }
-      @apply rounded-none px-8 py-4 text-black font-medium;
-      @apply hover:bg-chinese-purple hover:text-cultured hover:no-underline focus:no-underline;
-      @apply transition duration-300;
+      @apply rounded-r-xl px-8 py-4 font-medium transition duration-300;
+      @apply hover:bg-chinese-purple hover:text-cultured;
 
       &:hover,
       &.active {
@@ -27,6 +28,33 @@
 
       &.active {
         @apply bg-black text-cultured hover:bg-chinese-purple;
+      }
+    }
+  }
+}
+
+.top-navigation {
+  &__profile {
+    &__picture {
+      @apply h-10 w-10 rounded-full ring-0 ring-chinese-purple/50 ring-offset-2 border-chinese-purple;
+      @apply cursor-pointer hover:ring-4 transition duration-300;
+    }
+
+    &__dropdown {
+      @apply absolute right-0 flex flex-col;
+
+      > a {
+        @apply px-8 py-3 w-52 text-left bg-platinum;
+        @apply hover:bg-chinese-purple hover:text-cultured;
+        @extend %not-standard-link;
+
+        &:first-child {
+          @apply mt-4 rounded-tl-lg rounded-tr-lg;
+        }
+
+        &:last-child {
+          @apply rounded-bl-lg rounded-br-lg;
+        }
       }
     }
   }

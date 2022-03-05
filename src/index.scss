@@ -30,27 +30,33 @@
     @apply font-bold;
   }
 
-  h1 {
+  h1,
+  .h1 {
     @apply text-4xl xl:text-5xl my-5;
   }
 
-  h2 {
+  h2,
+  .h2 {
     @apply text-3xl xl:text-4xl my-4;
   }
 
-  h3 {
+  h3,
+  .h3 {
     @apply text-2xl xl:text-3xl my-3;
   }
 
-  h4 {
+  h4,
+  .h4 {
     @apply text-xl xl:text-2xl my-2;
   }
 
-  h5 {
+  h5,
+  .h5 {
     @apply text-lg xl:text-xl my-1;
   }
 
-  h6 {
+  h6,
+  .h6 {
     @apply text-base xl:text-lg;
   }
 }
@@ -86,5 +92,11 @@
         @apply input__input py-3 px-4 rounded-lg;
       }
     }
+  }
+}
+
+@layer utilities {
+  .not-standard-link {
+    @apply text-black focus:no-underline rounded-md hover:no-underline;
   }
 }

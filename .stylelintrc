@@ -17,3 +17,4 @@ rules:
   selector-class-pattern: null
   selector-max-compound-selectors: null
   selector-no-qualifying-type: null
+  no-descending-specificity: null
