@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <DashboardWrapper>
-      <div>
+      <div className="bg-white rounded-2xl p-8 border-anti-flash-white border-2 max-w-240 w-full">
         <h1>Welcome {user?.given_name}!</h1>
         <div>
           Logged in as {user?.name}&lt;{user?.email}&gt;
