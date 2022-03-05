@@ -14,7 +14,8 @@
       @apply rounded-none px-8 py-4 text-black font-medium;
       @apply hover:bg-chinese-purple hover:text-cultured hover:no-underline focus:no-underline;
 
-      &:hover {
+      &:hover,
+      &.active {
         #{$self}__icon {
           path {
             fill: $color-cultured-hex;
