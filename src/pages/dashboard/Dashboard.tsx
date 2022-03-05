@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
 import { PATH_DASHBOARD } from '../../shared/constants';
+import DashboardWrapper from './DashboardWrapper';
 
 const Dashboard: React.FC = () => {
   const { logout, user } = useAuth0();
@@ -13,7 +14,7 @@ const Dashboard: React.FC = () => {
   }, [navigate]);
 
   return (
-    <main>
+    <DashboardWrapper>
       <h1>Welcome to Dashboard!</h1>
       <div>
         Logged in as {user?.name}&lt;{user?.email}&gt;
@@ -21,7 +22,7 @@ const Dashboard: React.FC = () => {
       <button type="button" onClick={() => logout({ returnTo: window.location.origin })}>
         Logout!
       </button>
-    </main>
+    </DashboardWrapper>
   );
 };
 

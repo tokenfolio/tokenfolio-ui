@@ -1,0 +1,30 @@
+@import 'src/shared/styles/colors';
+
+.left-navigation {
+  &__menu {
+    @apply flex flex-col;
+    $self: &;
+
+    a {
+      #{$self}__icon {
+        path {
+          fill: $color-black-hex;
+        }
+      }
+      @apply rounded-none px-8 py-4 text-black font-medium;
+      @apply hover:bg-chinese-purple hover:text-cultured hover:no-underline focus:no-underline;
+
+      &:hover {
+        #{$self}__icon {
+          path {
+            fill: $color-cultured-hex;
+          }
+        }
+      }
+
+      &.active {
+        @apply bg-black text-cultured hover:bg-chinese-purple;
+      }
+    }
+  }
+}
