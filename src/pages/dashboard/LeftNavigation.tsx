@@ -62,8 +62,8 @@ const LeftNavigation: React.FC = () => (
         </NavLink>
       ))}
     </div>
-    <div className="absolute bottom-8 left-8">
-      <Link to={PATH_SUPPORT} className="left-navigation__support-button">
+    <div className="absolute w-72 bottom-8 text-center">
+      <Link to={PATH_SUPPORT} className="left-navigation__support-button text-left">
         {PAGES[PATH_SUPPORT].title}
         <span className="border-2 text-sm float-right font-bold border-cultured rounded-full w-6 h-6 text-center inline-block">
           ?
