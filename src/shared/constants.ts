@@ -1,4 +1,4 @@
-export const PATH_DASHBOARD = '/dashboard';
+export const PATH_DASHBOARD = '/';
 export const PATH_WALLET = '/wallet';
 export const PATH_ACTIVE_DEALS = '/deals';
 export const PATH_TOKEN_SALES = '/sales';
