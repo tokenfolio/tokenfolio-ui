@@ -4,27 +4,11 @@
 .left-navigation {
   &__menu {
     @apply flex flex-col;
-    $self: &;
 
-    a {
+    > a {
       @extend %not-standard-link;
-      #{$self}__icon {
-        path {
-          fill: $color-black-hex;
-        }
-      }
-      @apply rounded-r-xl px-8 py-4 font-medium transition duration-300;
-      @apply hover:bg-chinese-purple hover:text-cultured;
-
-      &:hover,
-      &.active {
-        #{$self}__icon {
-          path {
-            fill: $color-cultured-hex;
-            transition: all 100ms ease-out;
-          }
-        }
-      }
+      @apply flex items-center gap-2 rounded-r-xl px-8 py-4 font-medium;
+      @apply transition duration-300 hover:bg-chinese-purple hover:text-cultured;
 
       &.active {
         @apply bg-black text-cultured hover:bg-chinese-purple;

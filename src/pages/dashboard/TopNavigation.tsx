@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Link, useLocation } from 'react-router-dom';
-import { PAGES, PATH_ACCOUNT, PATH_DASHBOARD, PATH_LOGOUT } from 'shared/constants';
+import { PAGES, PATH_DASHBOARD } from 'shared/constants';
+import { topNavigationOptions } from 'pages/dashboard/constants';
 
 const TopNavigation: React.FC = () => {
   const { pathname } = useLocation();
@@ -10,7 +11,7 @@ const TopNavigation: React.FC = () => {
 
   return (
     <nav className="h-20 flex items-center justify-between">
-      <h1 className="h4">{PAGES[pathname === '/' ? PATH_DASHBOARD : pathname].title}</h1>
+      <h1 className="h4">{PAGES[`/${pathname.split('/')[1]}`].title}</h1>
       <div
         className="group relative"
         onMouseEnter={() => setShowDropdown(true)}
@@ -27,8 +28,11 @@ const TopNavigation: React.FC = () => {
         {showDropdown && (
           <div className="top-navigation__profile__dropdown">
             <div className="arrow-up border-b-white mr-2 ml-auto" />
-            <Link to={PATH_ACCOUNT}>{PAGES[PATH_ACCOUNT].title}</Link>
-            <Link to={PATH_LOGOUT}>{PAGES[PATH_LOGOUT].title}</Link>
+            {Object.keys(topNavigationOptions).map((path) => (
+              <Link key={path} to={path}>
+                {PAGES[path].title}
+              </Link>
+            ))}
           </div>
         )}
       </div>

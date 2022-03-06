@@ -1,17 +1,17 @@
+import React from 'react';
 import { Coins, Gavel, HelpCircle, Layers, LayoutDashboard, Settings, Wallet } from 'lucide-react';
+import {
+  PATH_ACTIVE_DEALS,
+  PATH_ALLOCATION_STAKING,
+  PATH_DASHBOARD,
+  PATH_LOGOUT,
+  PATH_SETTINGS,
+  PATH_SUPPORT,
+  PATH_TOKEN_SALES,
+  PATH_WALLET,
+} from 'shared/constants';
 
-export const PATH_DASHBOARD = '/';
-export const PATH_WALLET = '/wallet';
-export const PATH_ACTIVE_DEALS = '/deals';
-export const PATH_TOKEN_SALES = '/token-sales';
-export const PATH_ALLOCATION_STAKING = '/staking';
-export const PATH_SETTINGS = '/settings';
-export const PATH_SETTINGS_BASIC = '/settings/basic';
-export const PATH_SETTINGS_IDENTITY = '/settings/identity';
-export const PATH_SUPPORT = '/support';
-export const PATH_LOGOUT = '/logout';
-
-export const PAGES: { [path: string]: { title: string; icon?: React.ElementType } } = {
+export const leftNavigationOptions: { [path: string]: { title: string; icon: React.ComponentType } } = {
   [PATH_DASHBOARD]: {
     title: 'Dashboard',
     icon: LayoutDashboard,
@@ -40,12 +40,13 @@ export const PAGES: { [path: string]: { title: string; icon?: React.ElementType 
     title: 'Support',
     icon: HelpCircle,
   },
+};
+
+export const topNavigationOptions: { [path: string]: { title: string } } = {
+  [PATH_SETTINGS]: {
+    title: 'Account settings',
+  },
   [PATH_LOGOUT]: {
     title: 'Logout',
   },
-};
-
-export const AUTH0_CONFIG = {
-  domain: 'tokenfolio.eu.auth0.com',
-  clientId: 'NAkEPHFTKDhHKBNY6x1ARb4DErFYQIt3',
 };

@@ -1,0 +1,19 @@
+@import 'src/shared/styles/utils';
+
+.dashboard {
+  &__account {
+    &__left-navigation {
+      @apply mt-16 flex flex-col;
+
+      > a {
+        @extend %not-standard-link;
+        @apply rounded-r-xl px-8 py-4 font-medium transition duration-300;
+        @apply hover:bg-chinese-purple hover:text-cultured;
+
+        &.active {
+          @apply bg-black text-cultured hover:bg-chinese-purple;
+        }
+      }
+    }
+  }
+}
