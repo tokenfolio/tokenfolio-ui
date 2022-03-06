@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { PATH_SETTINGS, PATH_LOGOUT } from 'shared/constants';
+import { PATH_SETTINGS_BASIC, PATH_SETTINGS_IDENTITY } from 'shared/constants';
 
 export const navigationOptions: { [path: string]: { title: string } } = {
-  [PATH_SETTINGS]: {
+  [PATH_SETTINGS_BASIC]: {
     title: 'Basic info',
   },
-  [PATH_LOGOUT]: {
-    title: 'Others',
+  [PATH_SETTINGS_IDENTITY]: {
+    title: 'Identity',
   },
 };
 
