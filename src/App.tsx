@@ -2,7 +2,7 @@ import React from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from 'pages/Home';
-import Dashboard from 'pages/dashboard/Dashboard';
+import Dashboard from 'pages/dashboard/dashboard/Dashboard';
 import Logout from 'pages/Logout';
 import NotFound from 'pages/404/NotFound';
 import { AUTH0_CONFIG, PATH_DASHBOARD, PATH_LOGOUT } from 'shared/constants';

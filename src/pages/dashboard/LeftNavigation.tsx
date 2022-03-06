@@ -9,7 +9,6 @@ import {
   PATH_TOKEN_SALES,
   PATH_WALLET,
 } from 'shared/constants';
-import 'pages/dashboard/Dashboard.scss';
 import tokenfolioLogo from 'shared/assets/tokenfolio-black.svg';
 import { ReactComponent as DashboardIcon } from 'shared/assets/dashboard-icon.svg';
 import { ReactComponent as WalletIcon } from 'shared/assets/wallet-icon.svg';

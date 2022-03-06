@@ -2,6 +2,7 @@ import React from 'react';
 import TopNavigation from 'pages/dashboard/TopNavigation';
 import LeftNavigation from 'pages/dashboard/LeftNavigation';
 import Footer from 'pages/dashboard/Footer';
+import 'pages/dashboard/DashboardWrapper.scss';
 
 type Props = {
   children: React.ReactNode;

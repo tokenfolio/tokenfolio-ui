@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
-import DashboardWrapper from './DashboardWrapper';
+import DashboardWrapper from '../DashboardWrapper';
 
 const Dashboard: React.FC = () => {
   const { logout, user } = useAuth0();
