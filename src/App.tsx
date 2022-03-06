@@ -8,10 +8,12 @@ import Wallet from 'pages/dashboard/wallet/Wallet';
 import ActiveDeals from 'pages/dashboard/deals/ActiveDeals';
 import TokenSales from 'pages/dashboard/tokenSales/TokenSales';
 import AllocationStaking from 'pages/dashboard/staking/AllocationStaking';
+import AccountSettingsLayout from 'pages/dashboard/account/AccountSettingsLayout';
 import Logout from 'pages/Logout';
 import NotFound from 'pages/error/NotFound';
 import {
   AUTH0_CONFIG,
+  PATH_ACCOUNT,
   PATH_ACTIVE_DEALS,
   PATH_ALLOCATION_STAKING,
   PATH_DASHBOARD,
@@ -20,6 +22,7 @@ import {
   PATH_WALLET,
 } from 'shared/constants';
 import store from 'shared/store/store';
+import AccountBasicInfoSettings from "./pages/dashboard/account/basic/AccountBasicInfoSettings";
 
 const App = () => (
   <Auth0Provider domain={AUTH0_CONFIG.domain} clientId={AUTH0_CONFIG.clientId} redirectUri={window.location.origin}>
@@ -32,6 +35,9 @@ const App = () => (
             <Route path={PATH_ACTIVE_DEALS} element={<ActiveDeals />} />
             <Route path={PATH_TOKEN_SALES} element={<TokenSales />} />
             <Route path={PATH_ALLOCATION_STAKING} element={<AllocationStaking />} />
+            <Route path={PATH_ACCOUNT} element={<AccountSettingsLayout />}>
+              <Route index element={<AccountBasicInfoSettings />} />
+            </Route>
           </Route>
           <Route path={PATH_LOGOUT} element={<Logout />} />
           <Route path="*" element={<NotFound />} />

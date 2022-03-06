@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
-  PAGES,
+  PAGES, PATH_ACCOUNT,
   PATH_ACTIVE_DEALS,
   PATH_ALLOCATION_STAKING,
   PATH_DASHBOARD,
   PATH_SUPPORT,
   PATH_TOKEN_SALES,
-  PATH_WALLET,
-} from 'shared/constants';
+  PATH_WALLET
+} from "shared/constants";
 import tokenfolioLogo from 'shared/assets/tokenfolio-black.svg';
 import { ReactComponent as DashboardIcon } from 'shared/assets/dashboard-icon.svg';
 import { ReactComponent as WalletIcon } from 'shared/assets/wallet-icon.svg';
@@ -38,6 +38,10 @@ const menuOptions: {
   },
   {
     path: PATH_ALLOCATION_STAKING,
+    icon: AllocationStakingIcon,
+  },
+  {
+    path: PATH_ACCOUNT,
     icon: AllocationStakingIcon,
   },
 ];
