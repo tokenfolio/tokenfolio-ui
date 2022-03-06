@@ -55,11 +55,11 @@
         @extend %not-standard-link;
 
         &:nth-child(2) {
-          @apply rounded-tl-lg rounded-tr-lg;
+          @apply rounded-t-lg;
         }
 
         &:last-child {
-          @apply rounded-bl-lg rounded-br-lg;
+          @apply rounded-b-lg;
         }
       }
     }
