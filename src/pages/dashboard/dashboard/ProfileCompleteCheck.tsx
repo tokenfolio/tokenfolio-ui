@@ -27,7 +27,7 @@ const ProfileCompleteCheck: React.FC = () => {
   if (percentageComplete > 80) return null;
 
   return (
-    <div>
+    <>
       <h3 className="h5 font-medium mb-6">Finish setting up your Tokenfolio profile</h3>
       <p className="my-4">Your profile is {percentageComplete}% complete</p>
       <div className="my-4 bg-platinum h-4 w-full rounded-lg">
@@ -36,7 +36,7 @@ const ProfileCompleteCheck: React.FC = () => {
       <button className="button__lg__black mt-4" type="button" onClick={() => navigate(PATH_ACCOUNT)}>
         Update profile
       </button>
-    </div>
+    </>
   );
 };
 
