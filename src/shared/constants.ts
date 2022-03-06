@@ -1,7 +1,7 @@
 export const PATH_DASHBOARD = '/';
 export const PATH_WALLET = '/wallet';
 export const PATH_ACTIVE_DEALS = '/deals';
-export const PATH_TOKEN_SALES = '/sales';
+export const PATH_TOKEN_SALES = '/token-sales';
 export const PATH_ALLOCATION_STAKING = '/staking';
 export const PATH_ACCOUNT = '/account';
 export const PATH_SUPPORT = '/support';

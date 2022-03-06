@@ -5,9 +5,20 @@ import { Provider } from 'react-redux';
 import DashboardLayout from 'pages/dashboard/DashboardLayout';
 import Dashboard from 'pages/dashboard/dashboard/Dashboard';
 import Wallet from 'pages/dashboard/wallet/Wallet';
+import ActiveDeals from 'pages/dashboard/deals/ActiveDeals';
+import TokenSales from 'pages/dashboard/tokenSales/TokenSales';
+import AllocationStaking from 'pages/dashboard/staking/AllocationStaking';
 import Logout from 'pages/Logout';
 import NotFound from 'pages/error/NotFound';
-import { AUTH0_CONFIG, PATH_DASHBOARD, PATH_LOGOUT, PATH_WALLET } from 'shared/constants';
+import {
+  AUTH0_CONFIG,
+  PATH_ACTIVE_DEALS,
+  PATH_ALLOCATION_STAKING,
+  PATH_DASHBOARD,
+  PATH_LOGOUT,
+  PATH_TOKEN_SALES,
+  PATH_WALLET,
+} from 'shared/constants';
 import store from 'shared/store/store';
 
 const App = () => (
@@ -18,6 +29,9 @@ const App = () => (
           <Route path={PATH_DASHBOARD} element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
             <Route path={PATH_WALLET} element={<Wallet />} />
+            <Route path={PATH_ACTIVE_DEALS} element={<ActiveDeals />} />
+            <Route path={PATH_TOKEN_SALES} element={<TokenSales />} />
+            <Route path={PATH_ALLOCATION_STAKING} element={<AllocationStaking />} />
           </Route>
           <Route path={PATH_LOGOUT} element={<Logout />} />
           <Route path="*" element={<NotFound />} />
