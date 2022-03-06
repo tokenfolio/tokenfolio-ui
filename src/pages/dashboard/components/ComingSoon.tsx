@@ -1,11 +1,13 @@
 import React from 'react';
-import DashboardSectionWrapper from 'pages/dashboard/DashboardSectionWrapper';
+import DashboardComponentWrapper, { DashboardComponentWrapperProps } from 'pages/dashboard/DashboardComponentWrapper';
 
-const ComingSoon: React.FC = () => (
-  <DashboardSectionWrapper maxWidth={740}>
+type Props = DashboardComponentWrapperProps;
+
+const ComingSoon: React.FC<Props> = ({ maxWidth }) => (
+  <DashboardComponentWrapper maxWidth={maxWidth}>
     <h2>Coming soon</h2>
     <p className="mb-4">This feature is currently under constuction.</p>
-  </DashboardSectionWrapper>
+  </DashboardComponentWrapper>
 );
 
 export default ComingSoon;
