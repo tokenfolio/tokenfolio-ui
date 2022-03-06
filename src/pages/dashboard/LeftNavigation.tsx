@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { PAGES, PATH_SUPPORT } from 'shared/constants';
+import { PATH_SUPPORT } from 'shared/constants';
 import tokenfolioLogo from 'shared/assets/tokenfolio-black.svg';
 import Icon from 'shared/components/Icon';
 import { leftNavigationOptions } from 'pages/dashboard/constants';
@@ -18,14 +18,14 @@ const LeftNavigation: React.FC = () => {
       <div className="left-navigation__menu">
         {Object.keys(leftNavigationOptions).map((path) => (
           <NavLink className={path === ` /${pathname.split('/')[1]}` ? 'active' : ''} key={path} to={path}>
-            <Icon icon={PAGES[path].icon as React.ComponentType} className="mr-0.5" size={22} />
-            {PAGES[path].title}
+            <Icon icon={leftNavigationOptions[path].icon} className="mr-0.5" size={22} />
+            {leftNavigationOptions[path].title}
           </NavLink>
         ))}
       </div>
       <div className="absolute w-72 bottom-8 text-center">
         <Link to={PATH_SUPPORT} className="left-navigation__support-button text-left">
-          {PAGES[PATH_SUPPORT].title}
+          Support
           <span className="border-2 text-sm float-right font-bold border-cultured rounded-full w-6 h-6 text-center inline-block">
             ?
           </span>

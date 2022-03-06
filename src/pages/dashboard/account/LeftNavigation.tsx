@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { PATH_SETTINGS, PATH_DASHBOARD, PATH_LOGOUT } from 'shared/constants';
+import { PATH_SETTINGS, PATH_LOGOUT } from 'shared/constants';
 
 export const navigationOptions: { [path: string]: { title: string } } = {
   [PATH_SETTINGS]: {
@@ -13,11 +13,11 @@ export const navigationOptions: { [path: string]: { title: string } } = {
 
 const LeftNavigation: React.FC = () => (
   <nav className="dashboard__account__left-navigation">
-    <NavLink to={PATH_SETTINGS}>Basic settings</NavLink>
-    <NavLink to={PATH_DASHBOARD}>Basic settings</NavLink>
-    <NavLink to={PATH_DASHBOARD}>Basic settings</NavLink>
-    <NavLink to={PATH_DASHBOARD}>Basic settings</NavLink>
-    <NavLink to={PATH_DASHBOARD}>Basic settings</NavLink>
+    {Object.keys(navigationOptions).map((path) => (
+      <NavLink key={path} to={path}>
+        {navigationOptions[path].title}
+      </NavLink>
+    ))}
   </nav>
 );
 
