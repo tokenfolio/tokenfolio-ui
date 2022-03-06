@@ -63,10 +63,10 @@
 
 @layer components {
   .button {
-    @apply font-medium transition duration-300 focus-visible:ring-4 focus-visible:ring-chinese-purple;
+    @apply px-8 font-medium transition duration-300 focus-visible:ring-4 focus-visible:ring-chinese-purple;
 
     &__lg {
-      @apply w-56 py-3 rounded-lg hover:shadow-lg active:ring-4;
+      @apply py-3 rounded-lg hover:shadow-lg active:ring-4;
     }
 
     &__black {
