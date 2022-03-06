@@ -1,49 +1,25 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
-  PAGES, PATH_ACCOUNT,
+  PAGES,
+  PATH_ACCOUNT,
   PATH_ACTIVE_DEALS,
   PATH_ALLOCATION_STAKING,
   PATH_DASHBOARD,
   PATH_SUPPORT,
   PATH_TOKEN_SALES,
-  PATH_WALLET
-} from "shared/constants";
+  PATH_WALLET,
+} from 'shared/constants';
 import tokenfolioLogo from 'shared/assets/tokenfolio-black.svg';
-import { ReactComponent as DashboardIcon } from 'shared/assets/dashboard-icon.svg';
-import { ReactComponent as WalletIcon } from 'shared/assets/wallet-icon.svg';
-import { ReactComponent as ActiveDealsIcon } from 'shared/assets/active-deals-icon.svg';
-import { ReactComponent as TokenSalesIcon } from 'shared/assets/token-sales-icon.svg';
-import { ReactComponent as AllocationStakingIcon } from 'shared/assets/allocation-staking-icon.svg';
+import Icon from 'shared/components/Icon';
 
-const menuOptions: {
-  path: string;
-  icon: React.ElementType;
-}[] = [
-  {
-    path: PATH_DASHBOARD,
-    icon: DashboardIcon,
-  },
-  {
-    path: PATH_WALLET,
-    icon: WalletIcon,
-  },
-  {
-    path: PATH_ACTIVE_DEALS,
-    icon: ActiveDealsIcon,
-  },
-  {
-    path: PATH_TOKEN_SALES,
-    icon: TokenSalesIcon,
-  },
-  {
-    path: PATH_ALLOCATION_STAKING,
-    icon: AllocationStakingIcon,
-  },
-  {
-    path: PATH_ACCOUNT,
-    icon: AllocationStakingIcon,
-  },
+const menuOptions = [
+  PATH_DASHBOARD,
+  PATH_WALLET,
+  PATH_ACTIVE_DEALS,
+  PATH_TOKEN_SALES,
+  PATH_ALLOCATION_STAKING,
+  PATH_ACCOUNT,
 ];
 
 const LeftNavigation: React.FC = () => (
@@ -54,13 +30,13 @@ const LeftNavigation: React.FC = () => (
       </Link>
     </figure>
     <div className="left-navigation__menu">
-      {menuOptions.map(({ path, icon: Icon }) => (
+      {menuOptions.map((path) => (
         <NavLink
           className={({ isActive }) => `${isActive ? 'active' : ''} flex items-center gap-2`}
           key={path}
           to={path}
         >
-          <Icon className="left-navigation__menu__icon mb-1" />
+          {PAGES[path].icon && <Icon icon={PAGES[path].icon as React.ElementType} className="mr-0.5" size={22} />}
           {PAGES[path].title}
         </NavLink>
       ))}
