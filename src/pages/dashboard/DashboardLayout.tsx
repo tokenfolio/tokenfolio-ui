@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 import TopNavigation from 'pages/dashboard/TopNavigation';
 import LeftNavigation from 'pages/dashboard/LeftNavigation';
 import Footer from 'pages/dashboard/Footer';
@@ -26,4 +27,4 @@ const DashboardLayout: React.FC = () => (
   </div>
 );
 
-export default DashboardLayout;
+export default withAuthenticationRequired(DashboardLayout);

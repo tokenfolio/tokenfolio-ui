@@ -1,5 +1,4 @@
 import React from 'react';
-import { withAuthenticationRequired } from '@auth0/auth0-react';
 import DashboardSectionWrapper from 'pages/dashboard/DashboardSectionWrapper';
 import ProfileCompleteCheck from 'pages/dashboard/components/ProfileCompleteCheck';
 import KycVerifiedCheck from 'pages/dashboard/components/KycVerifiedCheck';
@@ -15,4 +14,4 @@ const Dashboard: React.FC = () => (
   </>
 );
 
-export default withAuthenticationRequired(Dashboard);
+export default Dashboard;
